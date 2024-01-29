@@ -1,6 +1,7 @@
 import "../css/main.css";
 
-const $ = require( "jquery" );
+import $ from 'jquery';
+import _ from 'lodash';
 
 const _ = require("lodash");
 
