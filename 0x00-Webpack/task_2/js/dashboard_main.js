@@ -3,8 +3,6 @@ import "../css/main.css";
 import $ from 'jquery';
 import _ from 'lodash';
 
-const _ = require("lodash");
-
 
 let count = 0;
 
