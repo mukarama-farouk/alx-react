@@ -5,10 +5,9 @@
 
 .Notifications {
     border: 3px dotted var(--color-brand);
-    margin: 0;
-    padding: 0;
+    padding: 0 20px;
     position: absolute;
-    width: 94%;
+    width: 95%;
     top: 10px;
     z-index: 999;
     font-weight: 500;

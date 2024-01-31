@@ -10,8 +10,8 @@ export default function Notifications() {
             <p>Here is the list of notifications</p>
             <button style={{
                 position: 'absolute',
-                top: '10px', // Adjust top position as needed
-                right: '10px', // Adjust right position as needed
+                top: '5px', 
+                right: '0', 
                 backgroundColor: '#fff',
                 border: 'none',
                 cursor: 'pointer',
