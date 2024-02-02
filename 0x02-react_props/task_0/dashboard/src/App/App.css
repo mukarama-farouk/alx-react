@@ -1,0 +1,10 @@
+:root {
+  --color-brand: #e01d3f;
+}
+
+.App {
+  position: relative;
+  height: 100vh;
+	max-width: 100vw;
+  font-weight: 500;
+}
