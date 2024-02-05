@@ -32,4 +32,16 @@ describe("App tests", () => {
 
     expect(component.contains(<Footer />)).toBe(true);
   });
+
+  it("should not render CourseList component when isLoggedIn is false", () => {
+    const component = shallow(<App isLoggedIn={false} />); // Pass isLoggedIn prop as false
+
+    expect(component.contains(<CourseList />)).toBe(false);
+  });
+
+  it("should render CourseList component when isLoggedIn is true", () => {
+    const component = shallow(<App isLoggedIn={true} />); // Pass isLoggedIn prop as true
+
+    expect(component.contains(<CourseList />)).toBe(true);
+  });
 });

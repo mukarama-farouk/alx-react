@@ -1,0 +1,24 @@
+.App {
+  position: relative;
+  height: 100vh;
+	max-width: 100vw;
+  font-weight: 500;
+}
+
+.Notifications {
+  border: 3px dotted #e01d3f;
+  padding: 0 20px;
+  position: absolute;
+  width: 95%;
+  top: 10px;
+  z-index: 999;
+  font-weight: 500;
+}
+
+[data-notification-type="default"] {
+  color: #3a04cf;
+}
+
+[data-urgent], [data-notification-type="urgent"] {
+  color: #e01d3f;
+}
