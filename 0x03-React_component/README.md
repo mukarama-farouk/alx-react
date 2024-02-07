@@ -7,6 +7,8 @@ This project aims at equiping us with knowledge on:
 - What an HOC is and how to use it
 - How to optimize performance and control which components to render
 
+![0x03. React component](./7953d594b3ffc14201f5.jpeg)
+
 **Requirements**
 - All your files will be interpreted/compiled on Ubuntu 18.04 LTS using node 12.x.x and npm 6.x.x
 - Allowed editors: vi, vim, emacs, Visual Studio Code
