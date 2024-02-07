@@ -14,3 +14,8 @@ This project aims at equiping us with knowledge on:
 - Allowed editors: vi, vim, emacs, Visual Studio Code
 - All your files should end with a new line
 - A README.md file, at the root of the folder of the project, is mandatory
+
+**Some useful resources**
+- [React Components](https://legacy.reactjs.org/docs/react-component.html)
+- [React pure components](https://legacy.reactjs.org/docs/react-api.html)
+- [React Higher Order Components](https://legacy.reactjs.org/docs/higher-order-components.html)
