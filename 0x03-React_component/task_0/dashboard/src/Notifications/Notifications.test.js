@@ -28,13 +28,13 @@ describe("Notification tests", () => {
     expect(wrapper.find("ul").childAt(2).html()).toEqual(`<li data-urgent=\"true\">${getLatestNotification()}</li>`);
   });
 
-  // it("renders an unordered list", () => {
-  //   const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} />);
-  //   expect(wrapper.find("ul").children()).toHaveLength(3);
-  //   wrapper.find("ul").forEach((node) => {
-  //     expect(node.equals(<NotificationItem />));
-  //   });
-  // });
+  it("renders an unordered list", () => {
+    const wrapper = shallow(<Notifications displayDrawer={true} listNotifications={listNotifications} />);
+    expect(wrapper.find("ul").children()).toHaveLength(3);
+      wrapper.find("ul").forEach((node) => {
+      expect(node.equals(<NotificationItem />));
+    });
+  });
 
   it("renders correct text", () => {
     const wrapper = shallow(<Notifications displayDrawer={true} />);
