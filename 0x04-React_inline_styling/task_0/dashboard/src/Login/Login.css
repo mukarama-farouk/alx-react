@@ -1,0 +1,9 @@
+.App-body{
+    margin: 50px;
+    height: 45%;
+    overflow: hidden;
+  }
+  
+  .App-body input, .App-body button {
+    margin-left: 10px;
+  }
