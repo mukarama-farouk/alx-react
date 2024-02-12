@@ -6,7 +6,7 @@ const rowStyle = {
 }
 
 const headerRowStyle = {
-  cackgroundColor: '#deb5b545'
+  backgroundColor: '#deb5b545'
 }
 
 
