@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StyleSheet, css } from "aphrodite";
 import closeIcon from "../assets/close-icon.png";
 import NotificationItem from "./NotificationItem";
+import "./Notifications.css";
 import PropTypes from "prop-types";
 import NotificationItemShape from "./NotificationItemShape";
 
