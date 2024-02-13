@@ -10,8 +10,6 @@ import Notifications from "../Notifications/Notifications";
 import CourseList from "../CourseList/CourseList";
 import { shallow, mount } from "enzyme";
 
-
-
 describe("App tests", () => {
   it("renders without crashing", () => {
     const component = shallow(<App />);
@@ -56,16 +54,19 @@ describe("App tests", () => {
 jest.spyOn(window, 'alert').mockImplementation(() => {});
 
 describe("Keyboard events", () => {
-  let mockLogOut;
+  let mockLogOut = jest.fn(); // Define mockLogOut as a Jest mock function
   let wrapper;
 
-  beforeEach(() => {
-    mockLogOut = jest.fn();
+  beforeAll(() => {
     wrapper = mount(<App logOut={mockLogOut} />);
   });
 
-  afterEach(() => {
+  afterAll(() => {
     wrapper.unmount();
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   it("calls logOut function when ctrl+h are pressed", () => {
@@ -75,18 +76,15 @@ describe("Keyboard events", () => {
   });
 
   it("calls alert with the correct message when ctrl+h are pressed", () => {
-    const spyAlert = jest.spyOn(window, "alert");
     const event = new KeyboardEvent("keydown", { ctrlKey: true, key: "h" });
     document.dispatchEvent(event);
-    expect(spyAlert).toHaveBeenCalledWith("Logging you out");
-    spyAlert.mockRestore();
+    expect(window.alert).toHaveBeenCalledWith("Logging you out");
   });
 
   it("removes event listener on componentWillUnmount", () => {
     wrapper.unmount();
     const event = new KeyboardEvent("keydown", { ctrlKey: true, key: "h" });
-    const spyLogOut = jest.spyOn(mockLogOut);
     document.dispatchEvent(event);
-    expect(spyLogOut).not.toHaveBeenCalled();
+    expect(mockLogOut).not.toHaveBeenCalled();
   });
 });
