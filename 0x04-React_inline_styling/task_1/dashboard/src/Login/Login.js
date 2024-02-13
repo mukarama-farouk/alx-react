@@ -1,38 +1,33 @@
-import React from 'react';
-import { StyleSheet,css } from 'aphrodite';
+import React from "react";
+import { StyleSheet, css } from "aphrodite";
+
+function Login() {
+  return (
+    <React.Fragment>
+      <div className={css(styles["App-body"])}>
+        <p>Login to access the full dashboard</p>
+        <form>
+          <label htmlFor="email">Email:</label>
+          <input className={css(styles.input)} type="email" name="email"></input>
+          <label htmlFor="password">Password:</label>
+          <input className={css(styles.input)} type="password" name="password"></input>
+          <button>OK</button>
+        </form>
+      </div>
+    </React.Fragment>
+  );
+}
 
 const styles = StyleSheet.create({
-    "App-body" : {
-        margin: "50px",
-        height: "45%",
-        overflow: "hidden"
-    },
-      
-    input: {
-        marginLeft: "10px"
-    },
+  "App-body": {
+    fontSize: "1rem",
+    padding: "2em",
+    height: "45%",
+  },
 
-    button: {
-        marginLeft: "10px"
-    },
+  input: {
+    margin: "10px",
+  },
+});
 
-    label: {
-        marginLeft: "15px"
-    }
-})
-
-function Login(){
-    return (
-        <React.Fragment>
-            <div className={css(styles['App-body'])}>
-                <p>Login to access the full dashboard</p>
-                <label htmlFor="email">Email:</label>
-                <input  className={css(styles.input)} type="email" id="email" />
-                <label className={css(styles.label)} htmlFor="password" >Password:</label>
-                <input  className={css(styles.input)} type="password" id="password" />
-                <button className={css(styles.button)}>Ok</button>
-            </div>
-        </React.Fragment>
-    )
-}
 export default Login;
