@@ -37,6 +37,19 @@ const styles = StyleSheet.create({
   
   '[data-notification-type="urgent"]': {
     color: "#e01d3f"
+  },
+
+  button: {
+    color: "#3a3a3a",
+    fontWeight: "bold",
+    background: "none",
+    border: "none",
+    fontSize: "15px",
+    position: "absolute",
+    right: "3px",
+    top: "3px",
+    cursor: "pointer",
+    outline: "none",
   }
   
 })
@@ -64,19 +77,7 @@ class Notifications extends Component {
         </div>
         {this.props.displayDrawer ? (
           <div className={css(styles.Notifications)}>
-            <button
-              style={{
-                color: "#3a3a3a",
-                fontWeight: "bold",
-                background: "none",
-                border: "none",
-                fontSize: "15px",
-                position: "absolute",
-                right: "3px",
-                top: "3px",
-                cursor: "pointer",
-                outline: "none",
-              }}
+            <button className={css(styles.button)}
               aria-label="Close"
               onClick={(e) => {
                 console.log("Close button has been clicked");

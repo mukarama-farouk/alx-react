@@ -27,8 +27,8 @@ function CourseList() {
     return (
         <table id='CourseList'className={css(styles.table)} >
             <thead>
-                <CourseListRow textFirstCell="Available courses" textSecondCell={null} isHeader={true}  className={css(styles.th)} />
-                <CourseListRow textFirstCell="Course name" textSecondCell="Credit" isHeader={true} className={css(styles.th)} />
+                <CourseListRow textFirstCell="Available courses" textSecondCell={null} isHeader={true} />
+                <CourseListRow textFirstCell="Course name" textSecondCell="Credit" isHeader={true}  />
             </thead>
             <tbody>
                 {listCourses.length > 0 ? (

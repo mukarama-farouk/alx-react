@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet,css } from 'aphrodite';
 
-
 const styles = StyleSheet.create({
     "App-body" : {
         margin: "50px",
@@ -15,6 +14,10 @@ const styles = StyleSheet.create({
 
     button: {
         marginLeft: "10px"
+    },
+
+    label: {
+        marginLeft: "15px"
     }
 })
 
@@ -25,7 +28,7 @@ function Login(){
                 <p>Login to access the full dashboard</p>
                 <label htmlFor="email">Email:</label>
                 <input  className={css(styles.input)} type="email" id="email" />
-                <label htmlFor="password" style={{marginLeft:'15px'}}>Password:</label>
+                <label className={css(styles.label)} htmlFor="password" >Password:</label>
                 <input  className={css(styles.input)} type="password" id="password" />
                 <button className={css(styles.button)}>Ok</button>
             </div>
