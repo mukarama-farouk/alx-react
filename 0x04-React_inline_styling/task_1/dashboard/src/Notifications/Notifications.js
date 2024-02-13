@@ -31,7 +31,11 @@ const styles = StyleSheet.create({
     color: "#3a04cf"
   },
   
-  '[data-urgent]: [data-notification-type="urgent"]' :{
+  '[data-urgent]' :{
+    color: "#e01d3f"
+  },
+  
+  '[data-notification-type="urgent"]': {
     color: "#e01d3f"
   }
   
