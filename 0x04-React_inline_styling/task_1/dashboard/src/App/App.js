@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
     position: "relative",
     height: "100vh",
     maxWidth: "100vw",
-    fontWeight: "500"
+    fontWeight: "500",
+    fontFamily: "Arial, Helvetica, sans-serif",
   }
 })
 
@@ -63,8 +64,9 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        <Notifications listNotifications={listNotifications} />
+        
         <div className={css(styles.App)}>
+          <Notifications listNotifications={listNotifications} />
           <Header />
 
           <BodySectionWithMarginBottom title="Course list">
