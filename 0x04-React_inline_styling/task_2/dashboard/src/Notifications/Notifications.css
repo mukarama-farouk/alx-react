@@ -1,8 +1,0 @@
-[data-notification-type="default"] {
-    color: #3a04cf;
-}
-  
-[data-urgent], [data-notification-type="urgent"] {
-    color: #e01d3f;
-}
-  
