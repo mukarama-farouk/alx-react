@@ -39,7 +39,10 @@ const styles = StyleSheet.create({
   },
 
   ul : {
-    padding: "0"
+    "@media (max-width:375px)" :{
+      padding: "0"
+    }
+    
   },
 
   button: {
