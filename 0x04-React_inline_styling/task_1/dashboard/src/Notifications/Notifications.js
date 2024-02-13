@@ -26,18 +26,6 @@ const styles = StyleSheet.create({
   menuItem: {
     textAlign: "right"
   },
-  
-  '[data-notification-type="default"]': {
-    color: "#3a04cf"
-  },
-  
-  '[data-urgent]' :{
-    color: "#e01d3f"
-  },
-  
-  '[data-notification-type="urgent"]': {
-    color: "#e01d3f"
-  },
 
   button: {
     color: "#3a3a3a",
@@ -88,7 +76,7 @@ class Notifications extends Component {
             {this.props.listNotifications.length != 0 ? <p>Here is the list of notifications</p> : null}
             <ul>
               {this.props.listNotifications.length == 0 ? <NotificationItem type="default" value="No new notification for now" /> : null}
-              {this.props.listNotifications.map((val, idx) => {
+              {this.props.listNotifications.map((val) => {
                 return <NotificationItem type={val.type} value={val.value} html={val.html} key={val.id} markAsRead={this.markAsRead} id={val.id} />;
               })}
             </ul>
