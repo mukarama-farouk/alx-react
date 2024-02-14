@@ -11,19 +11,22 @@ import PropTypes from "prop-types";
 import { getLatestNotification } from "../utils/utils";
 
 const styles = StyleSheet.create({
-  App: {
-    height: "100vh",
-    maxWidth: "100vw",
-    position: "relative",
-    fontFamily: "Arial, Helvetica, sans-serif",
-  },
-
-  "App-footer": {
-    borderTop: "3px solid #e01d3f",
-    fontStyle: "italic",
-    width: "100%",
-    textAlign: "center"
+  body: {
+    App: {
+      height: "100vh",
+      maxWidth: "100vw",
+      position: "relative",
+      fontFamily: "Arial, Helvetica, sans-serif",
+    },
+  
+    "App-footer": {
+      borderTop: "3px solid #e01d3f",
+      fontStyle: "italic",
+      width: "100%",
+      textAlign: "center"
+    }
   }
+  
 });
 
 class App extends React.Component {
