@@ -17,13 +17,6 @@ const styles = StyleSheet.create({
     position: "relative",
     fontFamily: "Arial, Helvetica, sans-serif",
   },
-  
-  "App-footer": {
-    borderTop: "3px solid #e01d3f",
-    fontStyle: "italic",
-    width: "100%",
-    textAlign: "center"
-  }
 
 });
 
