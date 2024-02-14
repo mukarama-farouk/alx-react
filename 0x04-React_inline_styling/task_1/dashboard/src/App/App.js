@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
     position: "relative",
     fontFamily: "Arial, Helvetica, sans-serif",
   },
+
+  "App-footer": {
+    borderTop: "3px solid #e01d3f",
+    fontStyle: "italic",
+    width: "100%",
+    textAlign: "center"
+  }
 });
 
 class App extends React.Component {
@@ -76,7 +83,10 @@ class App extends React.Component {
               iste vero dolor voluptates.
             </p>
           </BodySection>
-          <Footer />
+          <footer className={css(styles["App-footer"])}>
+          <Footer  />
+          </footer>
+          
         </div>
       </React.Fragment>
     );
