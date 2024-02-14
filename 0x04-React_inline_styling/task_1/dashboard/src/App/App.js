@@ -15,12 +15,7 @@ const styles = StyleSheet.create({
     height: "100vh",
     maxWidth: "100vw",
   },
-  'heading-section': {
-		borderBottom: '4px solid red',
-		display: 'flex',
-		justifyContent: 'space-between',
-		flexDirection: 'row-reverse',
-	},
+
 	'App-footer': {
 		borderTop: '4px solid red',
 		fontSize: '1.4rem',
@@ -69,10 +64,8 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <div className={css(styles.App)}>
-          <div className={css(styles["heading-section"])}>
             <Notifications listNotifications={this.listNotifications} />
             <Header />
-          </div>
           {this.props.isLoggedIn ? (
             <BodySectionWithMarginBottom title="Course list">
               <CourseList listCourses={this.listCourses} />
