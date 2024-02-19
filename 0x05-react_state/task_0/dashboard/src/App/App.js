@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Login from "../Login/Login";
 import CourseList from "../CourseList/CourseList";
-import Notifications from "../Notifications/Notifications";
+import Notifications from "../Notifications/Notifications"; // Update import statement
 import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom";
 import BodySection from "../BodySection/BodySection";
 import { StyleSheet, css } from "aphrodite";
@@ -14,7 +14,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { displayDrawer: false };
+    this.state = {
+      displayDrawer: false,
+    };
 
     this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
@@ -64,9 +66,9 @@ class App extends React.Component {
           <div className="heading-section">
             <Notifications
               listNotifications={this.listNotifications}
-              displayDrawer={this.state.displayDrawer}
-              handleDisplayDrawer={this.handleDisplayDrawer}
-              handleHideDrawer={this.handleHideDrawer}
+              displayDrawer={this.state.displayDrawer} // Pass displayDrawer prop
+              handleDisplayDrawer={this.handleDisplayDrawer} // Pass handleDisplayDrawer prop
+              handleHideDrawer={this.handleHideDrawer} // Pass handleHideDrawer prop
             />
             <Header />
           </div>
