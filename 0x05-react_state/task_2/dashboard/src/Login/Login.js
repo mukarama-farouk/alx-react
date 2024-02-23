@@ -18,15 +18,14 @@ const styles = StyleSheet.create({
     },
 })
 
-function Login() {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+function Login({ logIn }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [enableSubmit, setEnableSubmit] = useState(false);
 
     const handleLoginSubmit = (event) => {
         event.preventDefault();
-        setIsLoggedIn(true);
+        logIn(email, password);
     }
 
     const handleChangeEmail = (event) => {
@@ -51,35 +50,32 @@ function Login() {
 
     return (
         <React.Fragment>
-            {!isLoggedIn && (
-                <div className={css(styles['App-body'])}>
-                    <p>Login to access the full dashboard</p>
-                    <form onSubmit={handleLoginSubmit}>
-                        <label htmlFor="email">Email:</label>
-                        <input
-                            className={css(styles.input)}
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={handleChangeEmail}
-                        />
-                        <label htmlFor="password">Password:</label>
-                        <input
-                            className={css(styles.input)}
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={handleChangePassword}
-                        />
-                        <input
-                            type='submit'
-                            value="Ok"
-                            disabled={!enableSubmit}
-                        />
-                    </form>
-                </div>
-            )}
-            {isLoggedIn && <p>You are logged in!</p>}
+            <div className={css(styles['App-body'])}>
+                <p>Login to access the full dashboard</p>
+                <form onSubmit={handleLoginSubmit}>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        className={css(styles.input)}
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={handleChangeEmail}
+                    />
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        className={css(styles.input)}
+                        type="password"
+                        id="password"
+                        value={password}
+                        onChange={handleChangePassword}
+                    />
+                    <input
+                        type='submit'
+                        value="Ok"
+                        disabled={!enableSubmit}
+                    />
+                </form>
+            </div>
         </React.Fragment>
     )
 }
